@@ -15,6 +15,7 @@ xhr.onload = function(){
 
 document.getElementById('search-bar-btn').addEventListener('click',(e) => {
     let ele = document.getElementById('search-bar').value;
+    document.getElementById('search-bar').value = "";
     const url = " https://api.tvmaze.com/search/shows?q=" + ele;
     xhr.open("GET",url);
     e.preventDefault();

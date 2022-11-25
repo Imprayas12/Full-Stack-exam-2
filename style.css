@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
     transition: 0.5s;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid rgba(0,0,0, 0.25);
 }
 
 .header {
@@ -40,9 +40,59 @@
 
 .display-movies {
     width: fit-content;
+    /* block-size: fit-content; */
     margin: auto;
-    display: grid;
+    display: flex;
     border : 5px solid black;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    flex-direction:row;
+    width: 70%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 1fr); */
+}
+
+input[type = "radio"] {
+    appearance: none;
+    height : 1.5rem;
+    width: 1.5rem;
+    border: 2px solid;
+    border-radius: 50%;
+    
+}
+input[type = "radio"]:checked {
+    /* appearance: none;x */
+    background-color: var(--radio-color);
+}
+
+#babyPink{
+    --radio-color:rgb(242,172,185);
+}
+
+#blue {
+    --radio-color: rgb(19,64,179);
+}
+
+#orange {
+    --radio-color:rgb(227,110,19);
+}
+#dark {
+    --radio-color:rgb(32,42,68);
+}
+#light {
+    --radio-color: rgb(205,183,187);
+}
+:root:has(#blue:checked){
+    background-color: blue;
+}
+:root:has(#light:checked) {
+    background-color: lightcyan;
+}
+:root:has(#orange:checked) {
+    background-color: orange;
+}
+:root:has(#babyPink:checked) {
+    background-color: pink;
+}
+:root:has(#dark:checked) {
+    background-color: black;
 }
