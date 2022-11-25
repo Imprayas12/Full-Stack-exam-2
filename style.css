@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    width: 80%;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 5px solid black;
+    background-color: black;
+}
+
+#search-bar{
+    margin: auto;
+    display: grid;
+    border: 4px solid black;
+    text-align: center;
+    height: 40%;
+    width: 60%;
+    font-size: 25px;
+}
+
+#search-bar-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    width: 20%;
+    height: 20%;
+    font-size: 20px;
+}
+
+#search-bar-btn:hover{
+    background-color: bisque;
+}
+
+.display-movies {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    border : 5px solid black;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
